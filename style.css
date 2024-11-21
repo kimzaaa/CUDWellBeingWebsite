@@ -4,12 +4,12 @@
 
 @font-face {
     font-family: 'Bebas Neue';
-    src: url('Fonts/BebasNeue-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    src: url('Fonts/BebasNeue-Regular.eot'); /* IE9 Compat Modes */
+    src: url('Fonts/BebasNeue-Regular.eot') format('embedded-opentype'), /* IE6-IE8 */
+         url('Fonts/BebasNeue-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('Fonts/BebasNeue-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+         url('Fonts/BebasNeue-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
   }
-  
-
 
 /* Body Styling */
 body {
