@@ -267,6 +267,16 @@ p2 {
     background-repeat: no-repeat;
     padding: 30px 100px;
     border: 2px solid rgba(0, 0, 0, 0);
+    
+    position: relative;
+    font-family: 'Bebas Neue';  
+    top: -120px;
+    text-align: center;
+    font-size: 32px;
+    border-radius: 13px;
+    background-color: #FED053;
+    margin-top: 20px;
+    color: #000;
 }
 .hts {
     letter-spacing: 0px;
