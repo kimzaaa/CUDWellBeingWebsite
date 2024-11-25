@@ -278,27 +278,7 @@ p2 {
     margin-top: 20px;
     color: #000;
 }
-.hts {
-    letter-spacing: 0px;
-    color: #b4b4b4;
-    padding: 1rem 0;
-    font-family: 'Inter';
-    font-size: 16px;
-    text-align: center;
-    position: relative;
-    top: -200px;
-    margin-top: 20px;
-    
-    border: 2px solid rgba(0, 0, 0, 0);
-    background-color: rgba(0, 0, 0, 0);
-}
-.hts:active{
-    text-decoration: underline;
-}
-.hts:hover{
-    text-decoration: underline;
 
-}
 
 #Guide {
     padding: 2rem;
