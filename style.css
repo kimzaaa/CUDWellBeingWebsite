@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&Bebas+Neue&display=swap');
 
 @font-face {
     font-family: 'Bebas Neue';
@@ -68,6 +69,7 @@ button {
     background-color: #FED053;
     padding: 8px 32px;
     margin-top: 20px;
+    color: #000;
 }
 
 button:active {
@@ -266,15 +268,6 @@ p2 {
     padding: 30px 100px;
     border: 2px solid rgba(0, 0, 0, 0);
 }
-.dps{
-    background: linear-gradient(to right,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
-                url('picture/download\ on\ google\ play.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 30px 100px;
-    border: 2px solid rgba(0, 0, 0, 0);
-}
 .hts {
     letter-spacing: 0px;
     color: #b4b4b4;
@@ -340,8 +333,12 @@ p3 {
     margin-top: 20px;
 }
 video {
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+    top: -100px;
     padding-right: 50%;
-    padding-left: 10%;
+    padding-left: 5%;
 }
 .reg{
     position: relative;
