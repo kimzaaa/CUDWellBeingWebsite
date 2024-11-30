@@ -244,13 +244,32 @@ main {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    background-color: #000000;
     color: #333;
     position: relative;
     overflow: hidden;
     overflow-y: auto;
-    margin-top: 50px;
+    margin-top: 40px;
 }
+
+#background-video {
+    position: fixed;
+    right: 45%;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -2; /* Ensures the video stays in the background */
+
+}
+#video-overlay {
+    position: absolute;
+    right: 45%;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)); /* Semi-transparent black overlay */
+    z-index: -1; /* Overlay above the video */
+    pointer-events: none; /* Ensures it doesn’t block interactions */
+  }
 
 header2 {
 
