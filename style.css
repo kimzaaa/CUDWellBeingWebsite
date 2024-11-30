@@ -252,7 +252,7 @@ main {
 }
 
 #background-video {
-    position: fixed;
+    position: absolute;
     right: 45%;
     bottom: 0;
     width: 50%;
