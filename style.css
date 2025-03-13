@@ -1,460 +1,899 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&Bebas+Neue&display=swap');
-
-@font-face {
-    font-family: 'Bebas Neue';
-    src: url('Fonts/BebasNeue-Regular.eot'); /* IE9 Compat Modes */
-    src: url('Fonts/BebasNeue-Regular.eot') format('embedded-opentype'), /* IE6-IE8 */
-         url('Fonts/BebasNeue-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('Fonts/BebasNeue-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-         url('Fonts/BebasNeue-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-  }
-
-/* Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    background-color: #000000;
-    color: #333;
-    position: relative;
-    overflow: hidden;
-    overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+  min-height: 100vh;
 }
 
-/* Header Styling */
-header {
-    background: linear-gradient(to right,rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), 
-                url('picture/IMG_9882.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    letter-spacing: 5px;
-    color: #fff;
-    font-family: 'Bebas Neue'; 
-    font-size: 4rem;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 10%;
-    position: relative;
-    padding-right: 50%;
-    padding-left: 5%;
-    margin-top: 20px;
-    top:40px
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 1000;
 }
 
-/* Paragraph Styling (p1) */
-p1 {
-    letter-spacing: 0px;
-    color: #fff;
-    padding: 1rem 0;
-    font-family: 'Inter';
-    font-size: 20px;
-    text-align: center;
-    position: relative;
-    top: -100px;
-    margin-top: 20px;
+.logo-container {
+  display: flex;
+  align-items: center;
 }
 
-button {
-    position: relative;
-    font-family: 'Bebas Neue';  
-    top: -120px;
-    text-align: center;
-    font-size: 32px;
-    border-radius: 13px;
-    background-color: #FED053;
-    padding: 8px 32px;
-    margin-top: 20px;
-    color: #000;
+.logo {
+  width: 40px;
+  height: 40px;
 }
 
-button:active {
-    text-decoration: underline;
-}
-button:hover {
-    cursor: pointer;
-}
-
-/* Default nav styles */
-nav {
-    background-color: #000;
-    display: flex;
-    justify-content: flex-end; /* Align items to the right */
-    padding: 10px;
-    position: fixed; /* Make the nav fixed so it stays at the top */
-    right: 0; /* Align to the right of the screen */
-    top: 0; /* Position it at the top of the screen */
-    width: 100%; /* Ensure the nav bar spans the entire width */
-    z-index: 10;
+.logo-text {
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+  font-weight: bold;
 }
 
-.nav-icon {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between icon and text */
-    justify-content: flex-start;
-    flex-grow: 1;
-    padding-left: 2%;
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-/* Icon style */
-.nav-icon img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; /* Makes the icon circular */
+.nav-links li {
+  margin-left: 20px;
 }
 
-/* Name style */
-.nav-icon span {
-    font-size: 16px;
-    font-family: 'Outfit';
-    font-weight: bold;
-    color: #fff; /* Dark text color */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-nav ul {
-    list-style: none;
-    overflow: hidden;
-    color: #fff;
-    padding: 0;
-    text-align: right;
-    margin: 0;
-    display: flex;
-    justify-content: flex-end; /* Align items to the right */
+.nav-links a:hover {
+  text-decoration: underline;
 }
 
-nav ul li {
-    display: inline-block;
-    padding: 15px 20px;
-    margin: 0 5px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Ubuntu';
-    font-size: 16px;
-    line-height: 20px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.social-media-icon {
-    display: inline;
-    width: 144px;
-    height: 40px;
-    margin-right: 5px;
-    vertical-align: middle;
-}
-
-.social-media-text {
-    display: none;
-}
-
-.hamburger {
-    display: none;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    top: -10px; /* Moves hamburger icon to the top */
-    right: 20px; 
-    z-index: 11; 
-    margin-top: 20px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav {
-        /*background-color: #000;*/
-        display: flex;
-        justify-content: flex-end;
-        padding: 10px;
-        position: fixed; /* Fix the nav to the top of the screen */
-        top: 0; /* Ensure the nav stays at the top */
-        right: 0;
-        width: 100%; /* Ensure nav bar spans the entire width */
-    }
-
-    nav ul {
-        display: none; /* Initially hide the menu */
-        flex-direction: column;
-        align-items: flex-end; /* Align items to the right */
-        background: #000;
-        position: absolute;
-        top: 50px; /* Place the dropdown below the hamburger icon */
-        right: 0;
-        width: 200px;
-        border: 1px solid #333;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        z-index: 10;
-    }
-
-    nav ul.show {
-        display: flex; /* Show the menu when toggled */
-    }
-
-    nav ul li {
-        text-align: right;
-        margin: 0;
-        padding: 10px 15px;
-        width: 100%;
-    }
-
-    nav ul li a {
-        display: block;
-        width: 100%;
-    }
-
-    .social-media-icon {
-        display: none;
-    }
-
-    .social-media-text {
-        display: inline;
-    }
-
-    .hamburger {
-        display: block; /* Show hamburger on small screens */
-        margin-top: 20px;
-    }
-}
-
-
-
-/* Main Content */
-main {
-    padding: 1rem;
-}
-
-#Download {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    color: #333;
-    position: relative;
-    overflow: hidden;
-    overflow-y: auto;
-    margin-top: 40px;
-}
-
-#background-video {
-    position: absolute;
-    right: 45%;
-    bottom: 0;
-    width: 50%;
-    height: 100%;
-    z-index: -2; /* Ensures the video stays in the background */
-
-}
-#video-overlay {
-    position: absolute;
-    right: 45%;
-    bottom: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)); /* Semi-transparent black overlay */
-    z-index: -1; /* Overlay above the video */
-    pointer-events: none; /* Ensures it doesn’t block interactions */
-  }
-
-header2 {
-
-    letter-spacing: 5px;
-    color: #fff;
-    font-family: 'Bebas Neue'; 
-    font-size: 4rem;
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    padding-left: 50%;
-    padding-right: 5%;
-    margin-top: 20px;
-    top: -120px;
-}
-
-p2 {
-    letter-spacing: 0px;
-    color: #fff;
-    padding: 1rem 0;
-    font-family: 'Inter';
-    font-size: 20px;
-    text-align: center;
-    position: relative;
-    top: -100px;
-    margin-top: 20px;
-}
-
-.das{
-    background: linear-gradient(to right,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), 
-                url('picture/download\ on\ app\ store.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 30px 100px;
-    border: 2px solid rgba(0, 0, 0, 0);
-    
-    position: relative;
-    font-family: 'Bebas Neue';  
-    top: -120px;
-    text-align: center;
-    font-size: 32px;
-    border-radius: 13px;
-    background-color: rgba(0, 0, 0, 0);
-    margin-top: 20px;
-    color: #000;
-}
-
-#Guide {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    background-color: #E0DDD2;
-    color: #333;
-    position: relative;
-    overflow: hidden;
-    overflow-y: auto;
-    margin-top: 20px;
-}
-header3 {
-
-    letter-spacing: 5px;
-    color: #050316;
-    font-family: 'Bebas Neue'; 
-    font-size: 4rem;
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    margin-top: 20px;
-    top: -120px;
-}
-
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-  top: -200px;
-}
-
-/* Hide the images by default */
-.mySlides {
+.menu-toggle {
   display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-/* Next & previous buttons */
-.prev, .next {
+/* Section Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.content,
+.second-section,
+.poster-section,
+.fourth-section,
+.fifth-section {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  position: relative;
+}
+
+.content.visible,
+.second-section.visible,
+.poster-section.visible,
+.fourth-section.visible,
+.fifth-section.visible {
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.content {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px 20px;
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('nike-run-club-app.jpg');
+  background-size: cover;
+  background-position: 40% center;
+  background-repeat: no-repeat;
+}
+
+.left-section {
+  position: static;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.left-section p {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+.main-header {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 164px;
+  color: white;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.learn-more {
+  background-color: #FED053;
+  border: none;
+  padding: 10px 20px;
+  font-size: 32px;
+  border-radius: 8px;
   cursor: pointer;
+  font-family: "Bebas Neue", sans-serif;
+  width: auto;
+}
+
+.second-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.left-section-second {
+  flex: 0 0 50%;
+  padding: 20px;
+  position: relative;
+}
+
+.fourth-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.left-section-fourth {
+  flex: 0 0 50%;
+  padding: 20px;
+  position: relative;
+}
+
+/* Collage Styles */
+.collage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.collage-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.collage-image.active {
+  opacity: 1;
+}
+
+.right-section-second {
+  flex: 0 0 50%;
+  padding: 20px;
+  position: relative;
+}
+
+.second-text {
+  position: absolute;
+  top: 25%;
+  right: 25%;
+  max-width: 400px;
+}
+
+.nike-header {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 72px;
+  margin: 0 0 10px 0;
+  color: #000;
+}
+
+.image-buttons {
+  position: absolute;
+  top: 65%;
+  right: 50%;
+  width: 75%;
+  transform: translateX(50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.img-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.img-btn img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Poster Section (Static Layout with Popping Main Image) */
+.poster-section {
+  min-height: 100vh;
+  padding: 0;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw; /* Match viewport width */
+}
+
+.poster-container {
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.poster-images {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center all posters horizontally */
+  height: 100%;
+  gap: 100px; /* Space between posters */
+  /* No transition for transform since we're not sliding */
+}
+
+.poster-img {
+  width: 500px; /* Base width for posters */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Preserve original aspect ratio */
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  flex-shrink: 0;
+  z-index: 1; /* Default z-index for non-active posters */
+}
+
+.poster-img.main-img {
+  opacity: 1;
+  transform: scale(1.5); /* Main image pops up 1.5x larger (750px wide) */
+  z-index: 2; /* Bring main image to the front */
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+  padding: 10px;
+  color: #333;
   position: absolute;
   top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-family: 'Bebas Neue'; 
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  transform: translateY(-50%);
+  z-index: 10;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.left-btn {
+  left: 20px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.right-btn {
+  right: 20px;
 }
 
-/* Caption text */
-.text {
-  color: black;
-  font-size: 30px;
-  padding: 8px 12px;
+.poster-dots {
   position: absolute;
-  bottom: 0px;
-  width: 100%;
-  text-align: center;
-  font-family: 'Bebas Neue'; 
-  background-color: #FED053;
-  border-radius: 13px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: black;
-  font-size: 30px;
-  padding: 8px 12px;
-  position: absolute;
-  font-family: 'Bebas Neue'; 
-  font-weight: bold;
-  top: 10px;
-  left: 10px;
-  background-color: #FED053;
-  border-radius: 13px;
-}
-
-/* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
+  width: 12px;
+  height: 12px;
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+.right-section-fourth {
+  flex: 0 0 50%;
+  padding: 20px;
   position: relative;
-  top: -200px;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
+.fourth-text {
+  position: absolute;
+  top: 25%;
+  right: 25%;
+  max-width: 400px;
 }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+.fourth-header {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 72px;
+  margin: 0 0 10px 0;
 }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+.learn-more-fourth {
+  background-color: #FED053;
+  border: none;
+  padding: 4px 40px;
+  font-size: 32px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 10px;
+  font-family: "Bebas Neue", sans-serif;
 }
 
+/* Fifth Section (Podium) */
+.fifth-section {
+  min-height: 100vh;
+  padding: 20px;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 30px;
-    font-family: 'Bebas Neue', Arial, sans-serif;
+.podium-header {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 96px;
+  color: #333;
+  margin: 0 0 40px 0;
+  text-align: center;
+}
+
+.podium-leaderboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.podium-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.podium-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.category {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.podium {
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  gap: 15px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.podium.fade-out {
+  opacity: 0;
+}
+
+.rank {
+  width: 150px;
+  padding: 30px;
+  background: #ddd;
+  border-radius: 15px;
+  position: relative;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 32px;
+  color: #fff;
+}
+
+.first {
+  height: 250px;
+  background: gold;
+}
+
+.second {
+  height: 200px;
+  background: silver;
+}
+
+.third {
+  height: 150px;
+  background: #cd7f32; /* Bronze */
+}
+
+.name {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.arrow {
+  font-size: 48px;
+  cursor: pointer;
+  color: #333;
+  padding: 15px;
+}
+
+.leaderboard {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.leaderboard-header {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 48px;
+  color: #333;
+  margin: 0 0 20px 0;
+}
+
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.leaderboard-list li {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block;
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px 0;
+      z-index: 999;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      margin: 15px 20px;
+      text-align: center;
+  }
+
+  .nav-links a {
+      font-size: 18px;
+  }
+
+  .content {
+      padding: 80px 20px 20px;
+  }
+
+  .left-section {
+      width: 100%;
+      max-width: 100%;
+      gap: 20px;
+  }
+
+  .main-header {
+      font-size: 64px;
+  }
+
+  .second-section {
+      flex-direction: column;
+      padding: 20px;
+      min-height: auto;
+  }
+
+  .left-section-second {
+      flex: 0 0 100%;
+      padding: 10px;
+  }
+
+  .right-section-second {
+      flex: 0 0 100%;
+      padding: 10px;
+  }
+
+  .second-text {
+      position: static;
+      max-width: 100%;
+      padding: 20px 0;
+  }
+
+  .nike-header {
+      font-size: 48px;
+  }
+
+  .image-buttons {
+      position: static;
+      width: 100%;
+      transform: none;
+      justify-content: space-between;
+      padding: 20px 10px;
+  }
+
+  .img-btn {
+      margin: 0 5px;
+  }
+
+  .poster-images {
+    gap: 30px; /* Smaller gap on mobile */
+    flex-wrap: wrap; /* Allow wrapping if too many posters */
+    justify-content: center;
+  }
+
+  .poster-img {
+    width: 300px; /* Base width for mobile */
+    height: auto;
+    object-fit: contain;
+  }
+
+  .poster-img.main-img {
+    transform: scale(1.3); /* Slightly smaller scale on mobile */
+  }
+
+  .nav-btn {
+    font-size: 24px;
+  }
+
+  .left-btn {
+    left: 10px;
+  }
+
+  .right-btn {
+    right: 10px;
+  }
+
+  .poster-dots {
+    bottom: 10px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .fourth-section {
+      flex-direction: column;
+      padding: 20px;
+      min-height: auto;
+  }
+
+  .left-section-fourth {
+      flex: 0 0 100%;
+      padding: 10px;
+  }
+
+  .right-section-fourth {
+      flex: 0 0 100%;
+      padding: 10px;
+  }
+
+  .fourth-text {
+      position: static;
+      max-width: 100%;
+      padding: 20px 0;
+  }
+
+  .fourth-header {
+      font-size: 48px;
+  }
+
+  .learn-more-fourth {
+      font-size: 24px;
+      padding: 4px 16px;
+  }
+
+  .fifth-section {
+      padding: 40px 10px;
+  }
+
+  .podium-header {
+      font-size: 64px;
+      margin-bottom: 20px;
+  }
+
+  .podium-leaderboard {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .podium-container {
+      position: relative;
+      width: 100%;
+      padding: 0 10px;
+      display: flex;
+      justify-content: center;
+  }
+
+  .category {
+      font-size: 36px;
+      margin-bottom: 15px;
+  }
+
+  .podium {
+      gap: 10px;
+      margin: 0 auto;
+      justify-content: center;
+  }
+
+  .rank {
+      width: 100px;
+      padding: 15px;
+      font-size: 24px;
+  }
+
+  .first {
+      height: 200px;
+  }
+
+  .second {
+      height: 160px;
+  }
+
+  .third {
+      height: 120px;
+  }
+
+  .name {
+      font-size: 18px;
+      top: -20px;
+      width: 100px;
+  }
+
+  .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 36px;
+      padding: 0;
+      z-index: 10;
+  }
+
+  .left-arrow {
+      left: 10px;
+  }
+
+  .right-arrow {
+      right: 10px;
+  }
+
+  .leaderboard {
+      padding: 20px 0;
+      text-align: center;
+  }
+
+  .leaderboard-header {
+      font-size: 36px;
+  }
+
+  .leaderboard-list li {
+      font-size: 18px;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.navbar,
+.content,
+.second-section,
+.poster-section,
+.fourth-section,
+.fifth-section {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links li {
+  margin: 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Media Queries for Responsive Footer */
+@media (max-width: 768px) {
+  .footer {
+      padding: 20px 10px;
+  }
+
+  .footer-links {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .footer-logo-text {
+      font-size: 18px;
+  }
+
+  .footer-copyright {
+      font-size: 12px;
+  }
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px 20px;
+    text-align: center; /* Center text in dropdown items */
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+/* Adjust dropdown menu for mobile */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: none;
+        width: 100%;
+        display: none; /* Hidden by default, toggled by JS */
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        padding: 0; /* Remove padding to align with main menu */
+    }
+
+    .dropdown-menu.active {
+        display: flex; /* Use flexbox to center items when active */
+    }
+
+    .dropdown-menu li {
+        width: 100%; /* Full width for each item */
+    }
+
+    .dropdown-menu a {
+        padding: 10px 0; /* Adjust padding for better spacing */
+    }
 }
