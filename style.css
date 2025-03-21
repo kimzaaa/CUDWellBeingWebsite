@@ -71,6 +71,7 @@ body {
 
 .content,
 .second-section,
+.second-and-a-half-section,
 .poster-section,
 .fourth-section,
 .fifth-section {
@@ -81,6 +82,7 @@ body {
 
 .content.visible,
 .second-section.visible,
+.second-and-a-half-section,
 .poster-section.visible,
 .fourth-section.visible,
 .fifth-section.visible {
@@ -154,6 +156,22 @@ body {
   position: relative;
 }
 
+.second-and-a-half-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.left-section-second-and-a-half {
+  flex: 0 0 50%;
+  padding: 20px;
+  position: relative;
+}
+
+
 .fourth-section {
   display: flex;
   justify-content: space-between;
@@ -192,6 +210,11 @@ body {
 }
 
 .right-section-second {
+  flex: 0 0 50%;
+  padding: 20px;
+  position: relative;
+}
+.right-section-second-and-a-half {
   flex: 0 0 50%;
   padding: 20px;
   position: relative;
@@ -543,6 +566,12 @@ body {
       min-height: auto;
   }
 
+  .second-and-a-half-section {
+    flex-direction: column;
+    padding: 20px;
+    min-height: auto;
+}
+
   .left-section-second {
       flex: 0 0 100%;
       padding: 10px;
@@ -739,6 +768,7 @@ html, body {
 .navbar,
 .content,
 .second-section,
+.second-and-a-half-section,
 .poster-section,
 .fourth-section,
 .fifth-section {
