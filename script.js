@@ -202,12 +202,12 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
   // Podium cycling for multiple sections
   const podiumData = {
       "results-section": [
-          { category: "", ranks: [{ name: "", place: "2nd" }, { name: "", place: "1st" }, { name: "", place: "3rd" }] },
-          { category: "", ranks: [{ name: "", place: "2nd" }, { name: "", place: "1st" }, { name: "", place: "3rd" }] }
+          { category: "", ranks: [{ name: "นางสาว รมณ หาญวนานนท์", place: "2nd" }, { name: "ด.ญ.ณัชชา วาสนาประดิษฐ์", place: "1st" }, { name: "อ. พงษ์ภัค พิทยชินโชติ", place: "3rd" }] },
+          //{ category: "", ranks: [{ name: "", place: "2nd" }, { name: "", place: "1st" }, { name: "", place: "3rd" }] }
       ],
       "nike-run-section": [
-          { category: "", ranks: [{ name: "", place: "2nd" }, { name: "", place: "1st" }, { name: "", place: "3rd" }] },
-          { category: "", ranks: [{ name: "", place: "2nd" }, { name: "", place: "1st" }, { name: "", place: "3rd" }] }
+          { category: "", ranks: [{ name: "อาจารย์ ดร.นที ปิติวรรณ", place: "2nd" }, { name: "ผศ.กฤติญา ทิมสถิตย์", place: "1st" }, { name: "อาจารย์ ดร.กวิตา ฟองสถาพร", place: "3rd" }] },
+          //{ category: "", ranks: [{ name: "", place: "2nd" }, { name: "", place: "1st" }, { name: "", place: "3rd" }] }
       ]
   };
   
